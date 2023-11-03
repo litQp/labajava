@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.labv4.Controller">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -57,43 +57,19 @@
     </MenuBar>
     <SplitPane dividerPositions="0.5" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <items>
-            <TableView prefHeight="200.0" prefWidth="200.0">
+            <TableView fx:id="table" prefHeight="200.0" prefWidth="200.0">
 			  <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY" /></columnResizePolicy>
               <columns>
-                <TableColumn prefWidth="99.99999849796313" text="№ Договора" />
-                <TableColumn prefWidth="90.62395477294922" text="Клиент" />
-                  <TableColumn prefWidth="112.89599609375" text="Тип договора" />
-                  <TableColumn prefWidth="105.9840087890625" text="Статус договора" />
-                  <TableColumn prefWidth="125.1839599609375" text="Дата заключения договора" />
-                  <TableColumn prefWidth="115.968017578125" text="Дата закрытия договора" />
+                <TableColumn fx:id="c_number" prefWidth="99.99999849796313" text="№ Договора" />
+                <TableColumn fx:id="c_client" prefWidth="90.62395477294922" text="Клиент" />
+                  <TableColumn fx:id="c_type" prefWidth="112.89599609375" text="Тип договора" />
+                  <TableColumn fx:id="c_status" prefWidth="105.9840087890625" text="Статус договора" />
+                  <TableColumn fx:id="c_dataopen" prefWidth="125.1839599609375" text="Дата заключения договора" />
+                  <TableColumn fx:id="c_dataclose" prefWidth="115.968017578125" text="Дата закрытия договора" />
               </columns>
             </TableView>
         <AnchorPane prefHeight="551.0" prefWidth="541.0">
           <children>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="Договор №12324" textAlignment="CENTER" wrapText="false" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="20.0">
-                     <font>
-                <Font size="18.0" fx:id="x1" />
-                     </font></Label>
-                  <Label layoutX="14.0" layoutY="52.0" prefHeight="22.0" prefWidth="413.0" style="&#10;" text="Клиент:  ООО &quot;ТЕХНИК&quot;" textAlignment="CENTER" wrapText="false" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="50.0">
-                     <font>
-                        <Font size="14.0" fx:id="x11" />
-                     </font>
-                  </Label>
-                  <Label layoutX="14.0" layoutY="81.0" prefHeight="21.0" prefWidth="228.0" style="&#10;" text="Статус договора: Завершен" textAlignment="CENTER" wrapText="false" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="70.0">
-                     <font>
-                        <Font size="14.0" fx:id="x111" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="25.0" layoutY="80.0" style="&#10;" text="Дата заключения договора: 20.09.2023" textAlignment="CENTER" wrapText="false" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="90.0">
-                     <font>
-                        <Font size="14.0" fx:id="x1111" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="25.0" layoutY="100.0" style="&#10;" text="Дата закрытия договора:  1.10.2023" textAlignment="CENTER" wrapText="false" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="110.0">
-                     <font>
-                        <Font size="14.0" fx:id="x11111" />
-                     </font>
-                  </Label>
                   <HBox layoutX="65.0" layoutY="309.0" prefHeight="28.0" prefWidth="247.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
                      <children>
                         <Button mnemonicParsing="false" text="Удалить" />
@@ -101,6 +77,40 @@
                         <Button mnemonicParsing="false" text="Добавить" />
                      </children>
                   </HBox>
+                  <VBox prefHeight="143.0" prefWidth="417.0">
+                     <children>
+                  <Label alignment="CENTER" style="&#10;" text="Договор №12324" textAlignment="CENTER" wrapText="false">
+                           <font>
+                      <Font size="18.0" fx:id="x1" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="413.0" style="&#10;" text="Клиент:  ООО &quot;ТЕХНИК&quot;" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="14.0" fx:id="x11" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="22.0" prefWidth="413.0" style="&#10;" text="Тип: Аренда" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="14.0" fx:id="x112" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="21.0" prefWidth="228.0" style="&#10;" text="Статус договора: Завершен" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="14.0" fx:id="x111" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" style="&#10;" text="Дата заключения договора: 20.09.2023" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="14.0" fx:id="x1111" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" style="&#10;" text="Дата закрытия договора:  1.10.2023" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="14.0" fx:id="x11111" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
           </children>
         </AnchorPane>
       </items>
