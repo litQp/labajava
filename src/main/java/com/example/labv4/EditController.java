@@ -13,7 +13,7 @@ public class EditController {
 
     private Stage dialog;
 
-    private Agrement agrements;
+    private Agreement agrements;
 
     @FXML
     void edit(ActionEvent event) {
@@ -38,7 +38,7 @@ public class EditController {
     @FXML
     void cancel(ActionEvent event) {dialog.close();}
     public void getDialog(Stage dialogStage) {this.dialog = dialogStage;}
-    public void getAgreeemet(Agrement agrements) {
+    public void getAgreeemet(Agreement agrements) {
         text_num.setText(agrements.getNumber());
         text_client.setText(agrements.getClient());
         text_type.setText(agrements.getType());

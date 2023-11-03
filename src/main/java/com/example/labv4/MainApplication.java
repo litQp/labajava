@@ -12,7 +12,9 @@ public class MainApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("main.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 700);
-        stage.setTitle("Лаб 6");
+        stage.setTitle("Лаб 5");
+        Controller controller = fxmlLoader.getController();
+        controller.getStage(stage);
         stage.getIcons().add(new Image(Objects.requireNonNull(MainApplication.class.getResourceAsStream("/com/example/labv4/images/logo.png"))));
         stage.setScene(scene);
         stage.show();

@@ -1,15 +1,19 @@
 package com.example.labv4;
 
-public class Agrement {
+public class Agreement {
     String number,client,type,status,dateopen,dateclose;
 
-    public Agrement(String number, String client, String type, String status, String dateopen, String dateclose) {
+    public Agreement(String number, String client, String type, String status, String dateopen, String dateclose) {
         this.number = number;
         this.client = client;
         this.type = type;
         this.status = status;
         this.dateopen = dateopen;
         this.dateclose = dateclose;
+    }
+
+    public Agreement(){
+
     }
 
     public String getNumber() {
