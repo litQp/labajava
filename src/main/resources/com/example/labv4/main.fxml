@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.labv4.Controller">
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.labv4.Controller">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -72,39 +72,39 @@
           <children>
                   <HBox layoutX="65.0" layoutY="309.0" prefHeight="28.0" prefWidth="247.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0">
                      <children>
-                        <Button mnemonicParsing="false" text="Удалить" />
-                        <Button mnemonicParsing="false" text="Редактировать" />
-                        <Button mnemonicParsing="false" text="Добавить" />
+                        <Button mnemonicParsing="false" onAction="#delete" text="Удалить" />
+                        <Button mnemonicParsing="false" onAction="#edit" text="Редактировать" />
+                        <Button mnemonicParsing="false" onAction="#add" text="Добавить" />
                      </children>
                   </HBox>
                   <VBox prefHeight="143.0" prefWidth="417.0">
                      <children>
-                  <Label alignment="CENTER" style="&#10;" text="Договор №12324" textAlignment="CENTER" wrapText="false">
+                  <Label fx:id="l_num" alignment="CENTER" style="&#10;" text="Договор №" textAlignment="CENTER" wrapText="false">
                            <font>
                       <Font size="18.0" fx:id="x1" />
                            </font>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="413.0" style="&#10;" text="Клиент:  ООО &quot;ТЕХНИК&quot;" textAlignment="CENTER" wrapText="false">
+                        <Label fx:id="l_client" prefHeight="22.0" prefWidth="413.0" style="&#10;" text="Клиент:  " textAlignment="CENTER" wrapText="false">
                            <font>
                               <Font size="14.0" fx:id="x11" />
                            </font>
                         </Label>
-                        <Label prefHeight="22.0" prefWidth="413.0" style="&#10;" text="Тип: Аренда" textAlignment="CENTER" wrapText="false">
+                        <Label fx:id="l_type" prefHeight="22.0" prefWidth="413.0" style="&#10;" text="Тип: " textAlignment="CENTER" wrapText="false">
                            <font>
                               <Font size="14.0" fx:id="x112" />
                            </font>
                         </Label>
-                        <Label prefHeight="21.0" prefWidth="228.0" style="&#10;" text="Статус договора: Завершен" textAlignment="CENTER" wrapText="false">
+                        <Label fx:id="l_status" prefHeight="21.0" prefWidth="228.0" style="&#10;" text="Статус договора: " textAlignment="CENTER" wrapText="false">
                            <font>
                               <Font size="14.0" fx:id="x111" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" style="&#10;" text="Дата заключения договора: 20.09.2023" textAlignment="CENTER" wrapText="false">
+                        <Label fx:id="l_date_start" alignment="CENTER" style="&#10;" text="Дата заключения договора: " textAlignment="CENTER" wrapText="false">
                            <font>
                               <Font size="14.0" fx:id="x1111" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" style="&#10;" text="Дата закрытия договора:  1.10.2023" textAlignment="CENTER" wrapText="false">
+                        <Label fx:id="l_date_finish" alignment="CENTER" style="&#10;" text="Дата закрытия договора:  " textAlignment="CENTER" wrapText="false">
                            <font>
                               <Font size="14.0" fx:id="x11111" />
                            </font>
